@@ -34,9 +34,9 @@ const App = () => {
       }
       setBallPosition({ left: `${x}px`, top: `${y}px` });
     };
-    window.addEventListener("keydown", onKeyDown);
+    document.addEventListener("keydown", onKeyDown);
     return () => {
-      window.removeEventListener("keydown", onKeyDown);
+      document.removeEventListener("keydown", onKeyDown);
     };
   }, [x, y]);
 
