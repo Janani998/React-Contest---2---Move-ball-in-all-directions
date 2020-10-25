@@ -22,17 +22,20 @@ const App = () => {
     const onKeyDown = (event) => {
       if (event.keyCode === 39) {
         setX(x + 5);
+        setBallPosition({ left: `${x + 5}px`, top: `${y}px` });
       }
       if (event.keyCode === 37) {
         setX(x - 5);
+        setBallPosition({ left: `${x - 5}px`, top: `${y}px` });
       }
       if (event.keyCode === 38) {
         setY(y - 5);
+        setBallPosition({ left: `${x}px`, top: `${y - 5}px` });
       }
       if (event.keyCode === 40) {
         setY(y + 5);
+        setBallPosition({ left: `${x}px`, top: `${y + 5}px` });
       }
-      setBallPosition({ left: `${x}px`, top: `${y}px` });
     };
     document.addEventListener("keydown", onKeyDown);
     return () => {
